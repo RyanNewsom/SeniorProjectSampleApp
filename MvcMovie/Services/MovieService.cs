@@ -1,4 +1,5 @@
 ﻿using MvcMovie.Models;
+using MvcMovie.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,24 +9,25 @@ namespace MvcMovie.Services
 {
     public class MovieService
     {
+        MovieRepo repo = new MovieRepo();
+
         public List<Movie> getMovies()
         {
-            return null;
+            return repo.getMovies();
         }
         public void createMovie(Movie movie)
         {
-            
+            repo.createMovie(movie);
         }
         public Movie getMovie(int id)
         {
-            return null; 
+            return repo.readMovie(id); 
 
         }
         public void deleteMovie(int id)
         {
-            
+            repo.deleteMovie(id);
         }
-
     }
 
     
