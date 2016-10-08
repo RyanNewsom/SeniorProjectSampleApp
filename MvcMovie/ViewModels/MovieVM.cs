@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Data.Entity;
+using System.Linq;
+using System.Web;
 
-namespace MvcMovie.Models
+namespace MvcMovie.ViewModels
 {
-    public class Movie
+    public class MovieVM
     {
         public int ID { get; set; }
 
@@ -29,16 +31,4 @@ namespace MvcMovie.Models
         [StringLength(5)]
         public string Rating { get; set; }
     }
-
-    public class MovieDBContext : DbContext
-    {
-        public MovieDBContext()
-        {
-            Database.SetInitializer<MovieDBContext>
-                (new MigrateDatabaseToLatestVersion<MovieDBContext,
-                    MvcMovie.Migrations.Configuration>());
-        }
-        public DbSet<Movie> Movies { get; set; }
-    }
 }
-
