@@ -6,6 +6,9 @@ using System.Web.Mvc;
 
 namespace MvcMovie.Controllers
 {
+    /**
+     *Common Controller code goes here
+     **/
     public class BaseController : Controller
     {
     }

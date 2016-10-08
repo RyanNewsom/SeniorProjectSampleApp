@@ -12,6 +12,9 @@ using MvcMovie.Models;
 
 namespace MvcMovie.Controllers
 {
+    /*
+     * Handles authentication 
+     */
     [Authorize]
     public class AccountController : BaseController
     {

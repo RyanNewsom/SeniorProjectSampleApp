@@ -15,7 +15,7 @@ namespace MvcMovie.Controllers
      * Handles interactions with the web page and maps URL's to individual methods. Then Razor is used
      * to attach the model to the View and display it.
      * 
-     * */
+     **/
     public class MoviesController : BaseController
     {
         private MovieService movieService = new MovieService();

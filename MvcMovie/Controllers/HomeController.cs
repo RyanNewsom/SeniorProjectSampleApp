@@ -6,6 +6,9 @@ using System.Web.Mvc;
 
 namespace MvcMovie.Controllers
 {
+    /**
+     * Handles the Home page and returns the approriate Views via Razor.  
+     */
     public class HomeController : BaseController
     {
         public ActionResult Index()

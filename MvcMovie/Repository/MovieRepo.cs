@@ -8,6 +8,9 @@ using System.Web.Mvc;
 
 namespace MvcMovie.Repository
 {
+    /*
+     * Contains all the Movies and it's associated CRUD operations
+     */
     public class MovieRepo
     {
         private MovieDBContext db = new MovieDBContext();

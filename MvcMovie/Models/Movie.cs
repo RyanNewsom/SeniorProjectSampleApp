@@ -4,6 +4,9 @@ using System.Data.Entity;
 
 namespace MvcMovie.Models
 {
+    /*
+     * A Movie. 
+     */ 
     public class Movie
     {
         public int ID { get; set; }
@@ -30,6 +33,9 @@ namespace MvcMovie.Models
         public string Rating { get; set; }
     }
 
+    /*
+     * Entity FW Context used for accessing the database
+     */
     public class MovieDBContext : DbContext
     {
         public MovieDBContext()
