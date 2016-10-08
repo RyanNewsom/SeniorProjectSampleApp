@@ -11,33 +11,19 @@ using MvcMovie.Services;
 
 namespace MvcMovie.Controllers
 {
-    public class MoviesController : Controller
+    /**
+     * Handles interactions with the web page and maps URL's to individual methods. Then Razor is used
+     * to attach the model to the View and display it.
+     * 
+     * */
+    public class MoviesController : BaseController
     {
         private MovieService movieService = new MovieService();
 
         // GET: /Movies/
-        public ActionResult Index(string movieGenre, string searchString)
+        public ActionResult Index()
         {
-            //var GenreLst = new List<string>();
-
-            //var GenreQry = from d in db.Movies
-            //               orderby d.Genre
-            //               select d.Genre;
-
-            //GenreLst.AddRange(GenreQry.Distinct());
-            //ViewBag.movieGenre = new SelectList(GenreLst);
-
             var movies = movieService.getMovies();
-
-            //if (!String.IsNullOrEmpty(searchString))
-            //{
-            //    movies = movies.Where(s => s.Title.Contains(searchString));
-            //}
-
-            //if (!string.IsNullOrEmpty(movieGenre))
-            //{
-            //    movies = movies.Where(x => x.Genre == movieGenre);
-            //}
 
             return View(movies);
         }
