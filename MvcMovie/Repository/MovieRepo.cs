@@ -35,9 +35,12 @@ namespace MvcMovie.Repository
 
         public List<Movie> getMovies()
         {
-            var movies = from m in db.Movies
-                         select m;
+            List<Movie> movies = new List<Movie>();
 
+            foreach(Movie m in db.Movies)
+            {
+                movies.Add(m);
+            }
             return (List<Movie>) movies;
         }
         
