@@ -113,7 +113,7 @@ namespace MvcMovie.Controllers
         {
             if (ModelState.IsValid)
             {
-                movieService.getMovie(movie.ID);
+                movieService.update(movie);
                 return RedirectToAction("Index");
             }
             return View(movie);

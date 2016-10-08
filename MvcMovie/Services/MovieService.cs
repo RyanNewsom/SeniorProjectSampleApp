@@ -28,6 +28,11 @@ namespace MvcMovie.Services
         {
             repo.deleteMovie(id);
         }
+
+        internal void update(Movie movie)
+        {
+            repo.updateMovie(movie);
+        }
     }
 
     
