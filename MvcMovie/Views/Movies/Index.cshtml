@@ -3,13 +3,7 @@
     ViewBag.Title = "Index";
 }
 <div class="container">
-    <h2 style=" text-align:center">Index</h2>
-    <p>
-        @Html.ActionLink("Create New", "Create")
-        @using (Html.BeginForm("Index", "Movies", FormMethod.Get))
-        {
-        }
-    </p>
+    <h2 style=" text-align:center">Movies</h2>
 </div>
 <div class="card-panel white">
     <table class="table">
@@ -62,3 +56,6 @@
 </tr>
     }
 </table>
+
+<p><a class="btn btn-default" href="/Movies/Create">Create</a></p>
+
